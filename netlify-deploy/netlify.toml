@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  GEMINI_API_KEY = "AIzaSyAD-I9Aj9rRy6DzgE2S0DBvW8MAFyxQ61Y"
 
 [build.processing]
   skip_processing = false
