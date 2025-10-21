@@ -35,11 +35,41 @@ The application will automatically use the API keys from the `.env` file when:
 
 ### 5. Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `GEMINI_API_KEY` | Google Gemini API key for AI responses | Yes |
-| `NEXTAUTH_SECRET` | Secret for NextAuth.js authentication | Optional |
-| `NEXTAUTH_URL` | Base URL for authentication | Optional |
+| Variable | Description | Required | Where to Get |
+|----------|-------------|----------|--------------|
+| `GEMINI_API_KEY` | Google Gemini API key for AI responses | **Yes** | [Google AI Studio](https://aistudio.google.com/) |
+| `ELEVENLABS_API_KEY` | ElevenLabs API key for text-to-speech | **Yes** | [ElevenLabs](https://elevenlabs.io/) |
+| `ELEVENLABS_VOICE_ID` | Voice ID for TTS (default: Rachel) | No | Default: `21m00Tcm4TlvDq8ikWAM` |
+| `ELEVENLABS_MODEL_ID` | Model ID for TTS | No | Default: `eleven_multilingual_v2` |
+| `NEXTAUTH_SECRET` | Secret for NextAuth.js authentication | Optional | Generate with `openssl rand -base64 32` |
+| `NEXTAUTH_URL` | Base URL for authentication | Optional | Your domain URL |
+
+#### Example `.env.local` file:
+```bash
+# Required API Keys
+GEMINI_API_KEY=AIzaSyC_your_actual_gemini_key_here
+ELEVENLABS_API_KEY=sk_your_actual_elevenlabs_key_here
+
+# Optional Voice Settings
+ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM
+ELEVENLABS_MODEL_ID=eleven_multilingual_v2
+
+# Optional Authentication
+NEXTAUTH_SECRET=your_generated_secret_here
+NEXTAUTH_URL=http://localhost:3000
+```
+
+#### Quick Setup Commands:
+```bash
+# 1. Create environment file
+cp .env.example .env.local
+
+# 2. Edit with your API keys
+nano .env.local
+
+# 3. Generate NextAuth secret (optional)
+openssl rand -base64 32
+```
 
 ### 6. Troubleshooting
 
