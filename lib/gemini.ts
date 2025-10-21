@@ -34,7 +34,7 @@ export const getGeminiModel = () => {
   if (!instance) {
     throw new Error('Gemini AI is not properly initialized')
   }
-  return instance.getGenerativeModel({ model: 'gemini-1.5-flash' }) // Use the more reliable model
+  return instance.getGenerativeModel({ model: 'gemini-2.0-flash' }) // Use the latest stable model
 }
 
 // Function to generate AI responses for chat

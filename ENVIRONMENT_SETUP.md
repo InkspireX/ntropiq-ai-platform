@@ -47,7 +47,7 @@ The application will automatically use the API keys from the `.env` file when:
 #### Example `.env.local` file:
 ```bash
 # Required API Keys
-GEMINI_API_KEY=AIzaSyC_your_actual_gemini_key_here
+GEMINI_API_KEY=AIzaSyAD-I9Aj9rRy6DzgE2S0DBvW8MAFyxQ61Y
 ELEVENLABS_API_KEY=sk_your_actual_elevenlabs_key_here
 
 # Optional Voice Settings
